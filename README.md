@@ -11,3 +11,16 @@
     - 탭 클릭시 해당 카테고리 아이템 노출
         - 탭 영역 카테고리 UI
         - 메뉴리스트 UI
+
+
+### 주소
+
+- https://yunij.github.io/findMenu/
+
+### local server
+
+- start : npm run dev
+
+### deploy
+
+- deploy : npm run deploy
