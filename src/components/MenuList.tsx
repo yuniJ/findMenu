@@ -7,9 +7,9 @@ export default function MenuList() {
   const [menuData, setMenuData] = useState<Model.Items[]>([]);
   const menuDataApi = async () => {
     try {
-      const res = await fetch("http://localhost:1337/api/menu-lists").then(
-        (res) => res.json()
-      );
+      const res = await fetch(
+        "https://skilled-prosperity-c2f89bf4d5.strapiapp.com/api/menu-lists"
+      ).then((res) => res.json());
       console.log(res.data);
       setMenuData(res.data);
     } catch (err) {
@@ -19,7 +19,6 @@ export default function MenuList() {
 
   useEffect(() => {
     menuDataApi();
-    console.log(menuData);
   }, []);
 
   return (
