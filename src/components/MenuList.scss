@@ -1,0 +1,7 @@
+@import "../styles/_mixin";
+.menu-box{
+    .content{
+        position:static;@include prefixed(transform, translate(0,0));padding:0 3rem;
+    }
+    
+}

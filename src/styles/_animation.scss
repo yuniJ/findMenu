@@ -1,0 +1,57 @@
+ 
+@include keyframes (wave1) {
+	
+	0% {
+		@include prefixed(transform, scale(0.2, 0.2));
+		opacity: 0;
+	  }
+	  25% {
+		opacity: 1;
+	  }
+	  75% {
+		@include prefixed(transform, scale(1.2, 1.2));
+		opacity: 0.4;
+	  }
+	  100% {
+		opacity: 0;
+	  }
+}
+
+
+@include keyframes (wave2) {
+	
+	0% {
+		opacity: 0;
+		@include prefixed(transform, scale(0.2, 0.2));
+	  }
+	  25% {
+		opacity: 1;
+	  }
+	  50% {
+		opacity: 0.4;
+	  }
+	  100% {
+		opacity: 0;
+		@include prefixed(transform, scale(1.2, 1.2));
+	  }
+}
+@include keyframes (opa) {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@include keyframes(loading){
+	 
+		0% {
+		  @include prefixed(transform,rotate(0deg));
+		}
+		100% {
+			@include prefixed(transform,rotate(360deg));
+		}
+	  
+}

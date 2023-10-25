@@ -1,0 +1,17 @@
+@import "../styles/_mixin";
+.item-list{
+    position:relative;overflow:hidden;border-radius:1em;@include borderBox;margin-top:1.3rem;
+    background-color:rgba($color: #495c4c, $alpha: 1.0);padding:.5rem;
+}
+.item-list a{
+    display:flex;
+    flex-wrap: nowrap;
+    text-align:left;
+}
+.item-thumb{width:20.0rem;overflow:hidden;border-radius:1em;}
+.item-info {width:calc(100% - 20rem);color:#f5f5f5;
+    
+    @include borderBox;padding:1.5rem;
+    dt,dd{display:inline-block;width:100%;font-size:2rem;line-height:1.4em;}
+    dt{font-size:3rem;}
+}

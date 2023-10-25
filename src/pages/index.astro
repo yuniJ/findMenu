@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MenuList from "../components/MenuList";
+import CategoriesTab from "../components/CategoriesTab";
+---
+
+<Layout title="Welcome to Kim's Shop.">
+  <!-- 관리자 툴 strapi -->
+  <!-- 
+    - 카테고리 추가,
+    - 카테고리 선택 후 아이템 정보 입력
+    - 메뉴 사진, 
+    - 아이템명, 
+    - 아이템정보 -->
+
+  <!-- 유저 뷰 -->
+  <!-- 탭 영역 카테고리 -->
+  <!-- 메뉴리스트 -->
+  <CategoriesTab />
+  <MenuList client:load />
+</Layout>

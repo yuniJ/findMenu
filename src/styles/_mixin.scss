@@ -1,0 +1,188 @@
+@use "sass:math";
+
+$webkit: true !default;
+$moz: false !default;
+$ms: false !default;
+$o: false !default;
+
+$vw: 2560;
+$vh: 1440;
+
+@mixin prefixed($property, $value) {
+  @if $webkit == true {
+    -webkit-#{$property}: #{$value};
+  }
+
+  @if $moz == true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $ms == true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $o == true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+  @if $webkit == true {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $moz == true {
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $ms == true {
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $o == true {
+    @-o-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin bt($p, $t: null, $l: null, $r: null, $b: null, $w: null, $h: null) {
+  position: $p;
+  top: $t;
+  left: $l;
+  right: $r;
+  bottom: $b;
+  width: $w;
+  height: $h;
+  display: inline-block;
+  background-color: #30343a;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  line-height: 0;
+  font-size: 0;
+  text-indent: -99999em;
+  cursor: pointer;
+}
+
+@mixin btn(
+  $p: null,
+  $t: null,
+  $l: null,
+  $r: null,
+  $b: null,
+  $w: null,
+  $h: null
+) {
+  position: $p;
+  top: $t;
+  left: $l;
+  right: $r;
+  bottom: $b;
+  width: $w;
+  height: $h;
+  display: inline-block;
+  cursor: pointer;
+  text-indent: -99999em;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  &.off,
+  &.done {
+    cursor: default;
+    pointer-events: none;
+  }
+  &.on {
+    cursor: pointer;
+    pointer-events: auto;
+  }
+}
+
+@mixin clearAfter {
+  display: block;
+  clear: both;
+  content: "";
+}
+@mixin bg($image,$pos:center center) {
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: $pos;
+  display:inline-block;
+}
+
+
+@mixin rel(
+  $top: null,
+  $left: null,
+  $width: null,
+  $height: null,
+  $image: null,
+  $bg-size: null,
+  $bg-position: null
+) {
+  width: $width;
+  height: $height;
+  left: $left;
+  top: $top;
+
+  @if $image {
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+  }
+
+  @if $bg-size {
+    background-size: $bg-size;
+  }
+
+  @if $bg-position {
+    background-position: $bg-position;
+  }
+}
+
+@function vw($n) {
+  @return math.div($n * 100, $vw) + vw;
+}
+
+@function vh($n) {
+  @return math.div($n * 100, $vh) + vh;
+}
+
+@function rw($n, $w: $vw) {
+  @return (math.div($n, $w) * 100)+0%;
+}
+
+@function rh($n, $h: $vh) {
+  @return (math.div($n, $h) * 100)+0%;
+}
+
+@mixin wrap($minWidth, $maxWidth) {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  min-width: $minWidth;
+  max-width: $maxWidth;
+}
+
+
+
+@mixin borderBox {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}

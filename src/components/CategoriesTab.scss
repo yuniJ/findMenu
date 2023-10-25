@@ -1,0 +1,19 @@
+@import "../styles/_mixin";
+.categoryBox{
+    position:relative;display:inline-block;
+    @include borderBox;width:100%;margin-top:5rem;padding:0 3rem;
+    border-bottom:4px solid rgba($color: #495c4c, $alpha: 1.0);
+
+    ul{margin:0 auto;
+        display:flex;
+        flex-wrap: nowrap;
+        text-align:left;
+    }
+    .list{width:auto;height:7rem;padding:0 2rem;overflow:hidden;border-radius:1em 1em 0 0 ;display:flex;justify-content:center;align-items:center;
+        a{color:#000;font-weight:600;font-size:2.4rem;line-height: 1.4em;display:inline-block;}
+        &.on{background-color:rgba($color: #495c4c, $alpha: 1.0);
+            a{color:#fff;}
+        }
+    }
+    
+}
