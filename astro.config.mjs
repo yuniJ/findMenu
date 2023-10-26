@@ -9,7 +9,7 @@ export default defineConfig({
     assets: "astro",
     image: {
       // Example: Allow remote image optimization from a single domain
-      domains: ["astro.build"],
+      domains: ["https://yunij.github.io/findMenu/"],
     },
   },
   integrations: [react()],
