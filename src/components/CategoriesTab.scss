@@ -2,7 +2,7 @@
 .categoryBox{
     position:relative;display:inline-block;
     @include borderBox;width:100%;margin-top:5rem;padding:0 3rem;
-    border-bottom:4px solid rgba($color: #495c4c, $alpha: 1.0);
+    border-bottom:5px solid rgba($color: #495c4c, $alpha: 1.0);
 
     ul{margin:0 auto;
         display:flex;
