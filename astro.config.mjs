@@ -6,7 +6,7 @@ export default defineConfig({
   site: "https://yuniJ.github.io/findMenu",
   base: "/",
   build: {
-    assets: "astro-build",
+    assets: "astro",
   },
   integrations: [react()],
 });
