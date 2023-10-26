@@ -29,7 +29,11 @@ export default function MenuList() {
             <li className="item-list" key={list.id}>
               <a href="">
                 <span className="item-thumb">
-                  <img src={`/img/${list.attributes.menuThumb}`} />
+                  <img
+                    src={`${import.meta.env.BASE_URL}/img/${
+                      list.attributes.menuThumb
+                    }`}
+                  />
                 </span>
                 <dl className="item-info">
                   <dt className="item-name">

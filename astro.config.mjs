@@ -8,8 +8,5 @@ export default defineConfig({
   build: {
     assets: "astro",
   },
-  image: {
-    service: { entrypoint: "/findMenu/" },
-  },
   integrations: [react()],
 });
