@@ -29,22 +29,16 @@ export default function MenuList() {
             <li className="item-list" key={list.id}>
               <a href="">
                 <div className="mark">
-                  <i
-                    className={
-                      list.attributes.menuNewState ? "mark-new on" : "mark-new"
-                    }
-                  >
-                    신규
-                  </i>
-                  <i
-                    className={
-                      list.attributes.menuSellState
-                        ? "mark-sell on"
-                        : "mark-sell"
-                    }
-                  >
-                    품절
-                  </i>
+                  {list.attributes.menuNewState ? (
+                    <i className="mark-new on">신규</i>
+                  ) : (
+                    ""
+                  )}
+                  {list.attributes.menuSellState ? (
+                    <i className="mark-sell on">품절</i>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <span className="item-thumb">
                   <img
