@@ -7,6 +7,10 @@ export default defineConfig({
   base: "/findMenu/",
   build: {
     assets: "astro",
+    image: {
+      // Example: Allow remote image optimization from a single domain
+      domains: ["astro.build"],
+    },
   },
   integrations: [react()],
 });
