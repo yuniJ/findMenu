@@ -10,7 +10,7 @@ export default function MenuList() {
       const res = await fetch(
         "https://skilled-prosperity-c2f89bf4d5.strapiapp.com/api/menu-lists"
       ).then((res) => res.json());
-      console.log(res.data);
+      // console.log(res.data);
       setMenuData(res.data);
     } catch (err) {
       console.log(err);
@@ -28,6 +28,24 @@ export default function MenuList() {
           {menuData.map((list) => (
             <li className="item-list" key={list.id}>
               <a href="">
+                <div className="mark">
+                  <i
+                    className={
+                      list.attributes.menuNewState ? "mark-new on" : "mark-new"
+                    }
+                  >
+                    신규
+                  </i>
+                  <i
+                    className={
+                      list.attributes.menuSellState
+                        ? "mark-sell on"
+                        : "mark-sell"
+                    }
+                  >
+                    품절
+                  </i>
+                </div>
                 <span className="item-thumb">
                   <img
                     src={`${import.meta.env.BASE_URL}/img/${
