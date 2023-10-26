@@ -7,12 +7,12 @@ export default function CategoriesTab() {
         <li className="list on">
           <a href="">카테고리1</a>
         </li>
-        {/* <li className="list">
+        <li className="list">
           <a href="">카테고리2</a>
         </li>
         <li className="list">
           <a href="">카테고리3</a>
-        </li> */}
+        </li>
       </ul>
     </div>
   );
