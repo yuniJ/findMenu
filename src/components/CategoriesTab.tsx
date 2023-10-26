@@ -13,6 +13,9 @@ export default function CategoriesTab() {
         <li className="list">
           <a href="">카테고리3</a>
         </li>
+        <li className="list">
+          <a href="">카테고리4</a>
+        </li>
       </ul>
     </div>
   );
