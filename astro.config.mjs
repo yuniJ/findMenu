@@ -9,7 +9,7 @@ export default defineConfig({
     assets: "astro",
   },
   image: {
-    domains: ["astro.build"],
+    service: { entrypoint: "/findMenu/" },
   },
   integrations: [react()],
 });
