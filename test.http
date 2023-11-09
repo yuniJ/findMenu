@@ -1,5 +1,5 @@
-GET http://localhost:1337/api/menu-lists
+# GET http://localhost:1337/api/menu-lists
 
-# GET http://localhost:1337/api/categories
+GET http://localhost:1337/api/categories
 
 
